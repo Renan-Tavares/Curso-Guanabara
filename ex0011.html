@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h>Qual seu país de origem?</h>
+    <input type="text" name="txtvel" id="txtvel">
+    <input type="button" value="OK" onclick="Informar()">
+    <div id= 'res'></div>
+
+    <script>
+        var país = 'Brasil'
+        function Informar() {
+            let origem = window.document.querySelector('input#txtvel')
+            let origem2 = String(origem.value)
+            let res = window.document.querySelector('div#res')
+            res.innerHTML = `<p> Sua nacionalidade é...</p>`
+            // res.innerHTML += origem2
+
+            if (origem2 == país) {
+                res.innerHTML += 'Brasileira'
+         }  else {
+              res.innerHTML +='Estangeira'}
+      }
+    </script>
+    
+</body>
+</html>
